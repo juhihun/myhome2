@@ -20,9 +20,9 @@ public class EmpDAO extends DAO{
 			while(rs.next()) {
 				Map<String, Object> map = new HashMap<>();
 				map.put("사원번호", rs.getInt("emp_no"));
-				map.put("사원이름", rs.getString("emp_name"));
+				map.put("사원명", rs.getString("emp_name"));
 				map.put("사원연락처", rs.getString("emp_phone"));
-				map.put("사원이메일", rs.getString("emp_email"));
+				map.put("이메일", rs.getString("email"));
 				
 				list.add(map);
 			}
