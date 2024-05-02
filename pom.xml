@@ -3,6 +3,8 @@
   <groupId>com.yedam</groupId>
   <artifactId>myhome</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
   <dependencies>
 	<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc10 -->
 	<dependency>
@@ -24,7 +26,7 @@
     <version>2.10.1</version>
 </dependency>
   </dependencies>
-  <packaging>war</packaging>
+  
   <build>
     <plugins>
       <plugin>
