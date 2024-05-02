@@ -19,7 +19,7 @@ genderAry.forEach(gender => {
 function makeList(ary = []){
 	let obj = {id:1,first_name:'',last_name:'',email:'',gender:'',salary:''}
 	let props = ['id','first_name','email','salary'];
-	
+	document.querySelector('#show tbody').innerHTML = ""; //기존목록 지우기
 ary.forEach(emp =>{
 	//한건에 대한 처리.
 	let tr = document.createElement('tr');
@@ -33,3 +33,12 @@ ary.forEach(emp =>{
 })	
 } 
 	makeList(empList);
+	
+document.querySelector('#genderList')
+.addEventListener('change',function(){
+	let filterAry = empList.filter(emp => 
+		emp.gender == this.value);
+	makeList(filterAry);
+})
+	
+	
