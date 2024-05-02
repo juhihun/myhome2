@@ -106,8 +106,8 @@ function updateRow(){
 	editHtp.send();
 	editHtp.onload = function(){
 		let result = JSON.parse(editHtp.responseText);
-		console.log(result);
 		if(result.retCode == 'OK'){
+		console.log(result);
 		let newTr = makeRow(result.retVal);
 		oldTr.parentElement.replaceChild(newTr,oldTr);
 		}
